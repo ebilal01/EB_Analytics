@@ -1,4 +1,4 @@
-const BASE_URL = window.location.origin;
+const BASE_URL = "https://eb-analytics.onrender.com";
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchData();
