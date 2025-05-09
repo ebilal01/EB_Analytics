@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EB Analytics</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>EB Analytics</h1>
+        <h3>Track Your Training and Nutrition</h3>
+    </header>
+
+    <!-- Daily Stats Section -->
+    <section id="daily-stats">
+        <h2>Daily Stats</h2>
+        <form id="daily-stats-form">
+            <label>Date: <input type="date" name="date" required></label>
+            <label>Weight (lbs): <input type="number" name="weight" step="0.1" required></label>
+            <label>Calories (kcal): <input type="number" name="calories" required></label>
+            <label>Protein (g): <input type="number" name="protein" required></label>
+            <button type="submit">Add Stats</button>
+        </form>
+        <div class="graph-container">
+            <div id="weight-graph" class="graph"></div>
+            <div id="calories-graph" class="graph"></div>
+            <div id="protein-graph" class="graph"></div>
+        </div>
+    </section>
+
+    <!-- Lift Days Navigation -->
+    <nav>
+        <button class="lift-day-btn" data-day="Day 1">Day 1</button>
+        <button class="lift-day-btn" data-day="Day 2">Day 2</button>
+        <button class="lift-day-btn" data-day="Day 3">Day 3</button>
+        <button class="lift-day-btn" data-day="Day 4">Day 4</button>
+    </nav>
+
+    <!-- Lift Day Content -->
+    <section id="lift-day-content">
+        <h2 id="current-day">Select a Lift Day</h2>
+        <form id="add-exercise-form" style="display: none;">
+            <label>Add Exercise: <input type="text" name="exercise" required></label>
+            <button type="submit">Add</button>
+        </form>
+        <div id="exercises"></div>
+    </section>
+
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>
